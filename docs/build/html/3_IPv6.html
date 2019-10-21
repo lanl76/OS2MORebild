@@ -1,0 +1,116 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="da">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>3. Disabling af IPv6-opslag &#8212; OS2Mo Rebild Opsætning 1.0 dokumentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Søg" href="search.html" />
+    <link rel="next" title="3. Opsætning af NTP-synkronisering samt realmd" href="4_NTP-synkronisering.html" />
+    <link rel="prev" title="2. sources.list, apt update og apt install" href="2_Apt_Update.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Generelt indeks"
+             accesskey="I">indeks</a></li>
+        <li class="right" >
+          <a href="4_NTP-synkronisering.html" title="3. Opsætning af NTP-synkronisering samt realmd"
+             accesskey="N">næste</a> |</li>
+        <li class="right" >
+          <a href="2_Apt_Update.html" title="2. sources.list, apt update og apt install"
+             accesskey="P">forrige</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">OS2Mo Rebild Opsætning 1.0 dokumentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="disabling-af-ipv6-opslag">
+<h1>3. Disabling af IPv6-opslag<a class="headerlink" href="#disabling-af-ipv6-opslag" title="Permalink til denne overskrift">¶</a></h1>
+<p>Vi har i Rebild Kommune valgt at disable IPv6 fra alle servere da vi har oplevet problemer med at tilgå disse fra visse lokationer grundet routing.
+Snak med jeres interne netværksteam om dette også er noget i bør gøre i jeres opsætning.</p>
+<p>Alle kommandoer skal afvikles med root privileger - sudo -i</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;net.ipv6.conf.all.disable_ipv6 = 1&quot;</span> &gt;&gt; /etc/sysctl.d/99-sysctl.conf
+<span class="nb">echo</span> <span class="s2">&quot;net.ipv6.conf.default.disable_ipv6 = 1&quot;</span> &gt;&gt; /etc/sysctl.d/99-sysctl.conf
+<span class="nb">echo</span> <span class="s2">&quot;net.ipv6.conf.lo.disable_ipv6 = 1&quot;</span> &gt;&gt; /etc/sysctl.d/99-sysctl.conf
+
+<span class="c1">#genindlæs sysctl konfiguration</span>
+sysctl -p
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Forrige emne</h4>
+  <p class="topless"><a href="2_Apt_Update.html"
+                        title="forrige kapitel">2. sources.list, apt update og apt install</a></p>
+  <h4>Næste emne</h4>
+  <p class="topless"><a href="4_NTP-synkronisering.html"
+                        title="næste kapitel">3. Opsætning af NTP-synkronisering samt realmd</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Denne side</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/3_IPv6.rst.txt"
+            rel="nofollow">Vis kilde</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Hurtig søgning</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Søg" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Generelt indeks"
+             >indeks</a></li>
+        <li class="right" >
+          <a href="4_NTP-synkronisering.html" title="3. Opsætning af NTP-synkronisering samt realmd"
+             >næste</a> |</li>
+        <li class="right" >
+          <a href="2_Apt_Update.html" title="2. sources.list, apt update og apt install"
+             >forrige</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">OS2Mo Rebild Opsætning 1.0 dokumentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Lars Lyngsøe Højberg (Nils Rimestad red).
+      Bygget med <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

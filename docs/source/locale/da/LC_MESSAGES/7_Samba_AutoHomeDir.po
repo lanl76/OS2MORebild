@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Lars Lyngsøe Højberg (Nils Rimestad red)
+# This file is distributed under the same license as the OS2Mo Rebild
+# Opsætning package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OS2Mo Rebild Opsætning \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-20 22:42+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../source/7_Samba_AutoHomeDir.rst:2
+msgid "7. Konfiguration af Samba samt automatisk oprettelse af Home-dir"
+msgstr ""
+
+#: ../../source/7_Samba_AutoHomeDir.rst:4
+msgid ""
+"Vi opsætter Homemappen på linux serveren samt opsætter Samba. Samba skal "
+"kun bruges hvis man ønsker at kunne tilgå mapper på et Windows File "
+"Share."
+msgstr ""
+
+#: ../../source/7_Samba_AutoHomeDir.rst:8
+msgid "Opsæt automatisk opsætning af Homedir"
+msgstr ""
+
+#: ../../source/7_Samba_AutoHomeDir.rst:15
+msgid "Opsæt SAMBA"
+msgstr ""
+
+#: ../../source/7_Samba_AutoHomeDir.rst:17
+msgid "..code-block:Python"
+msgstr ""
+
+#: ../../source/7_Samba_AutoHomeDir.rst:19
+msgid ""
+"cp /etc/samba/smb.conf /etc/samba/smb.conf.initial #Backup intial config "
+"sed -i '/\\[global\\]/a workgroup = REBILD\\nclient signing = "
+"yes\\nclient use spnego = yes\\nkerberos method = secrets and "
+"keytab\\nrealm = REBILD.LAN\\nsecurity = ads' /etc/samba/smb.conf"
+msgstr ""
+

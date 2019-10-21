@@ -1,0 +1,161 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="da">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>3. Opsætning af NTP-synkronisering samt realmd &#8212; OS2Mo Rebild Opsætning 1.0 dokumentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Søg" href="search.html" />
+    <link rel="next" title="5. Kinit" href="5_Kinit_DomainJoin.html" />
+    <link rel="prev" title="3. Disabling af IPv6-opslag" href="3_IPv6.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Generelt indeks"
+             accesskey="I">indeks</a></li>
+        <li class="right" >
+          <a href="5_Kinit_DomainJoin.html" title="5. Kinit"
+             accesskey="N">næste</a> |</li>
+        <li class="right" >
+          <a href="3_IPv6.html" title="3. Disabling af IPv6-opslag"
+             accesskey="P">forrige</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">OS2Mo Rebild Opsætning 1.0 dokumentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="opsaetning-af-ntp-synkronisering-samt-realmd">
+<h1>3. Opsætning af NTP-synkronisering samt realmd<a class="headerlink" href="#opsaetning-af-ntp-synkronisering-samt-realmd" title="Permalink til denne overskrift">¶</a></h1>
+<div class="section" id="opsaetning-af-ntp">
+<h2>Opsætning af NTP<a class="headerlink" href="#opsaetning-af-ntp" title="Permalink til denne overskrift">¶</a></h2>
+<p>Opsæt timezone og npt client – ”rebild.lan” anvendes som ntp server i Rebild, da det er et DNS navn, som returnerer ip på vores domænecontrollerservere, som har NTP service kørende.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>timedatectl set-timezone Europe/Copenhagen
+
+<span class="c1">#Herunder indsætter vi NTP-serveren på listen</span>
+sed -i <span class="s1">&#39;/# Specify one or more NTP servers./a \server &lt;JERES_DOMÆNE&gt;&#39;</span> /etc/ntp.conf
+
+<span class="c1">#Her maskerer vi Ubuntupool fra listen - vi benytter regexp for at finde &#39;pool *.ubuntu&#39; og rette det til et med en maskeret version</span>
+sed -i -r <span class="s1">&#39;s/pool (.*).ubuntu/#pool \1.ubuntu/g&#39;</span> /etc/ntp.conf
+
+systemctl restart ntp
+</pre></div>
+</div>
+<p># Husk at rette jeres domain navne og os-version så den passer til jeres miljø.
+# Det vi opsættter i realmd.conf er hvor vi ønsker at bruger ”home” biblioteker skal placeres samt nødvendige domæne oplysninger og specificering af AD klient type.
+# Yderligere info kan findes på <a class="reference external" href="http://manpages.ubuntu.com/manpages/bionic/man5/realmd.conf.5.html">http://manpages.ubuntu.com/manpages/bionic/man5/realmd.conf.5.html</a></p>
+</div>
+<div class="section" id="opsaetning-af-realmd">
+<h2>Opsætning af realmd<a class="headerlink" href="#opsaetning-af-realmd" title="Permalink til denne overskrift">¶</a></h2>
+<p>Filen /etc/realmd.conf</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>users<span class="o">]</span>
+default-home <span class="o">=</span> /home/%D/%U
+default-shell <span class="o">=</span> /bin/bash
+
+<span class="o">[</span>active-directory<span class="o">]</span>
+default-client <span class="o">=</span> sssd
+os-name <span class="o">=</span> Ubuntu Server
+os-version <span class="o">=</span> <span class="m">16</span>.04
+
+<span class="o">[</span>service<span class="o">]</span>
+automatic-install <span class="o">=</span> no
+
+<span class="o">[</span>rebild.lan<span class="o">]</span>
+fully-qualified-names <span class="o">=</span> no
+automatic-id-mapping <span class="o">=</span> yes
+user-principal <span class="o">=</span> yes
+manage-system <span class="o">=</span> no
+
+<span class="o">[</span>rebild.dk<span class="o">]</span>
+fully-qualified-names <span class="o">=</span> no
+automatic-id-mapping <span class="o">=</span> yes
+user-principal <span class="o">=</span> yes
+manage-system <span class="o">=</span> no
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">3. Opsætning af NTP-synkronisering samt realmd</a><ul>
+<li><a class="reference internal" href="#opsaetning-af-ntp">Opsætning af NTP</a></li>
+<li><a class="reference internal" href="#opsaetning-af-realmd">Opsætning af realmd</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Forrige emne</h4>
+  <p class="topless"><a href="3_IPv6.html"
+                        title="forrige kapitel">3. Disabling af IPv6-opslag</a></p>
+  <h4>Næste emne</h4>
+  <p class="topless"><a href="5_Kinit_DomainJoin.html"
+                        title="næste kapitel">5. Kinit</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Denne side</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/4_NTP-synkronisering.rst.txt"
+            rel="nofollow">Vis kilde</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Hurtig søgning</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Søg" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Generelt indeks"
+             >indeks</a></li>
+        <li class="right" >
+          <a href="5_Kinit_DomainJoin.html" title="5. Kinit"
+             >næste</a> |</li>
+        <li class="right" >
+          <a href="3_IPv6.html" title="3. Disabling af IPv6-opslag"
+             >forrige</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">OS2Mo Rebild Opsætning 1.0 dokumentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Lars Lyngsøe Højberg (Nils Rimestad red).
+      Bygget med <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

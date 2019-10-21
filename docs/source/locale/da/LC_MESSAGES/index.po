@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Lars Lyngsøe Højberg (Nils Rimestad red)
+# This file is distributed under the same license as the OS2Mo Rebild
+# Opsætning package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OS2Mo Rebild Opsætning \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-20 22:42+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../source/index.rst:7
+msgid "Velkommen til OS2Mo Rebild's opsætning og dokumentation!"
+msgstr ""
+
+#: ../../source/index.rst:26
+msgid ":ref:`Search`"
+msgstr ""
+
+#: ../../source/index.rst:29
+msgid "OS2MO Server"
+msgstr ""
+
+#: ../../source/index.rst:30
+msgid ""
+"OS2MO Serveren ved Rebild Kommune er en Ubuntu 16.04. Ubuntu Serveren har"
+" vi opsat så den er domainjoined, hvilket giver fordelen, at vores IT-"
+"folk og eksterne Magentakonsulenter kan bruge AD Brugernavn og kode til "
+"at logge på serveren."
+msgstr ""
+
+#: ../../source/index.rst:34
+msgid "Rettigheder styres derved via AD, som tilfældet er med Windows servere."
+msgstr ""
+
+#: ../../source/index.rst:36
+msgid "**Trin for at lave Ubuntu Serveren:**"
+msgstr ""
+
+#: ../../source/index.rst:38
+msgid ""
+"Installer Ubuntu serveren via ISO (det anbefales at man som minimum har "
+"brugerkendskab til Linux og SSH for at udføre denne guide) Under "
+"installationen skal der opsættes Fast IP på serveren."
+msgstr ""
+
+#: ../../source/index.rst:41
+msgid ""
+"Denne vejledning/dokumentation er blevet til efter hjælp af Nils "
+"Rimestad, Viborg og dennes meget grundige viden på området. Ligeledes er "
+"vejledningen kopieret og tilrettet fra Viborgs, så den passer til det "
+"setup, vi har i Rebild Kommune."
+msgstr ""
+
+#: ../../source/index.rst:44
+msgid "**/Lars Lyngsøe Højberg**"
+msgstr ""
+

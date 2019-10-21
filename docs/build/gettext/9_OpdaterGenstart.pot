@@ -1,0 +1,30 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Lars Lyngsøe Højberg (Nils Rimestad red)
+# This file is distributed under the same license as the OS2Mo Rebild Opsætning package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OS2Mo Rebild Opsætning \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-20 22:47+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/9_OpdaterGenstart.rst:2
+msgid "9. Opdater APT og genstart"
+msgstr ""
+
+#: ../../source/9_OpdaterGenstart.rst:8
+msgid "Nu bør vi kunne logge på maskinen med vores AD-brugernavn, og styring af rettighederne foregår i vores AD."
+msgstr ""
+
+#: ../../source/9_OpdaterGenstart.rst:10
+msgid "En bruger i AD gruppen ’OS2MO_ADMOS2MOT_Administrators.rebild.lan_Administrators’ vil automatisk få Login rettigheder og mulighed for at elevere til super user på serveren."
+msgstr ""
+

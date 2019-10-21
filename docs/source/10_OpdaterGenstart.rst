@@ -1,0 +1,10 @@
+10. Opdater APT og genstart
+###########################
+
+.. code-block:: bash
+
+  apt upgrade -y && reboot
+
+Nu bør vi kunne logge på maskinen med vores AD-brugernavn, og styring af rettighederne foregår i vores AD.
+
+En bruger i AD gruppen ’OS2MO_ADMOS2MOT_Administrators.<JERES_DOMÆNE>_Administrators’ vil automatisk få Login rettigheder og mulighed for at elevere til super user på serveren.

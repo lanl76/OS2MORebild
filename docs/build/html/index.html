@@ -1,0 +1,153 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="da">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Velkommen til OS2Mo Rebild’s opsætning og dokumentation! &#8212; OS2Mo Rebild Opsætning 1.0 dokumentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Søg" href="search.html" />
+    <link rel="next" title="1. Hosts-filen" href="1_Hosts_File.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Generelt indeks"
+             accesskey="I">indeks</a></li>
+        <li class="right" >
+          <a href="1_Hosts_File.html" title="1. Hosts-filen"
+             accesskey="N">næste</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">OS2Mo Rebild Opsætning 1.0 dokumentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="velkommen-til-os2mo-rebild-s-opsaetning-og-dokumentation">
+<h1>Velkommen til OS2Mo Rebild’s opsætning og dokumentation!<a class="headerlink" href="#velkommen-til-os2mo-rebild-s-opsaetning-og-dokumentation" title="Permalink til denne overskrift">¶</a></h1>
+<blockquote>
+<div><div class="align-right figure">
+<a class="reference internal image-reference" href="_images/RUbuntu.png"><img alt="Alternative text" src="_images/RUbuntu.png" style="width: 200px;" /></a>
+</div>
+</div></blockquote>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1_Hosts_File.html">1. Hosts-filen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_Apt_Update.html">2. sources.list, apt update og apt install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_Apt_Update.html#opdater-pakkebiblioteker-og-installer-pakker">Opdater pakkebiblioteker og installer pakker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_IPv6.html">3. Disabling af IPv6-opslag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_NTP-synkronisering.html">3. Opsætning af NTP-synkronisering samt realmd</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_NTP-synkronisering.html#opsaetning-af-ntp">Opsætning af NTP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_NTP-synkronisering.html#opsaetning-af-realmd">Opsætning af realmd</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5_Kinit_DomainJoin.html">5. Kinit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_Realm_For_Login.html">6. Realm og Login-rettigheder</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_Realm_For_Login.html#administratorrettigheder-til-os2mo-serverne">Administratorrettigheder til OS2MO serverne</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="7_Samba_AutoHomeDir.html">7. Konfiguration af Samba samt automatisk oprettelse af Home-dir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="7_Samba_AutoHomeDir.html#opsaet-automatisk-opsaetning-af-homedir">Opsæt automatisk opsætning af Homedir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_Samba_AutoHomeDir.html#opsaet-samba">Opsæt SAMBA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="8_Kerberos.html">8. Kerberos ændring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_Sudoers.html">9. Opsætning af Sudoers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9_Sudoers.html#opsaet-sudoers-filen">Opsæt Sudoers filen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10_OpdaterGenstart.html">10. Opdater APT og genstart</a></li>
+</ul>
+</div>
+<ul class="simple">
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Søgeside</span></a></li>
+</ul>
+</div>
+<div class="section" id="os2mo-server">
+<h1>OS2MO Server<a class="headerlink" href="#os2mo-server" title="Permalink til denne overskrift">¶</a></h1>
+<p>OS2MO Serveren ved Rebild Kommune er en Ubuntu 16.04.
+Ubuntu Serveren har vi opsat så den er domainjoined, hvilket giver fordelen, at vores IT-folk og eksterne Magentakonsulenter kan bruge AD
+Brugernavn og kode til at logge på serveren.</p>
+<p>Rettigheder styres derved via AD, som tilfældet er med Windows servere.</p>
+<p><strong>Ubuntuserveren trin for trin:</strong></p>
+<p>Installer Ubuntu serveren via ISO (det anbefales at man som minimum har brugerkendskab til Linux og SSH for at udføre denne guide)
+Under installationen skal der opsættes Fast IP på serveren.</p>
+<p>Denne vejledning/dokumentation er blevet til efter hjælp af Nils Rimestad, Viborg og dennes meget grundige viden på området. Ligeledes er vejledningen
+kopieret og tilrettet fra Viborgs, så den passer til det setup, vi har i Rebild Kommune.</p>
+<p><strong>/Lars Lyngsøe Højberg</strong></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Velkommen til OS2Mo Rebild’s opsætning og dokumentation!</a></li>
+<li><a class="reference internal" href="#os2mo-server">OS2MO Server</a></li>
+</ul>
+
+  <h4>Næste emne</h4>
+  <p class="topless"><a href="1_Hosts_File.html"
+                        title="næste kapitel">1. Hosts-filen</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Denne side</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Vis kilde</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Hurtig søgning</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Søg" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Generelt indeks"
+             >indeks</a></li>
+        <li class="right" >
+          <a href="1_Hosts_File.html" title="1. Hosts-filen"
+             >næste</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">OS2Mo Rebild Opsætning 1.0 dokumentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Lars Lyngsøe Højberg (Nils Rimestad red).
+      Bygget med <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

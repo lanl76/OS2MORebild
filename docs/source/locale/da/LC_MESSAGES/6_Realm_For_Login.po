@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Lars Lyngsøe Højberg (Nils Rimestad red)
+# This file is distributed under the same license as the OS2Mo Rebild
+# Opsætning package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OS2Mo Rebild Opsætning \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-20 22:42+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../source/6_Realm_For_Login.rst:2
+msgid "6. Realm og Login-rettigheder"
+msgstr ""
+
+#: ../../source/6_Realm_For_Login.rst:4
+msgid ""
+"Vi strammer nu sikkerheden så det kun er Domain Admins og en bestemt "
+"gruppe der kan tilgå serveren. Opret en AD gruppen som du ønsker at bruge"
+" til at styre hvilke AD konti de skal have."
+msgstr ""
+
+#: ../../source/6_Realm_For_Login.rst:7
+msgid "Administratorrettigheder til OS2MO serverne"
+msgstr ""
+
+#: ../../source/6_Realm_For_Login.rst:8
+msgid ""
+"I Rebild har vi kaldt gruppen: "
+"”OS2MO_ADMOS2MOT_Administrators.rebild.lan_Administrators”"
+msgstr ""
+
+#: ../../source/6_Realm_For_Login.rst:10
+msgid "Opsæt Realm til kun at tillade login af Domain Admins"
+msgstr ""
+

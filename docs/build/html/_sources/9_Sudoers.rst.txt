@@ -1,0 +1,17 @@
+9. Opsætning af Sudoers
+#######################
+
+Her sikrer vi os, at de grupper vi ønsker har adgang til at køre kommandoer som super user.
+
+Opsæt Sudoers filen
+-------------------
+
+.. code-block:: bash
+
+  cat <<EOT >> /etc/sudoers.d/domainusers
+  # Allow domain users to use the sudo command
+  %domain\ admins ALL=(ALL:ALL) ALL
+  %SRV_OS2MO_<JERES_SERVERNAVN>_Administrators ALL=(ALL:ALL) ALL
+  EOT
+
+  chmod 0440 /etc/sudoers.d/domainusers
