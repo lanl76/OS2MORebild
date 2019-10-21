@@ -10,9 +10,6 @@ Velkommen til OS2MO Rebild's opsætning og dokumentation!
         :alt: Alternative text
         :figclass: align-right
 
-.. role:: bash(code)
-   :language: bash
-
 .. toctree::
    :maxdepth: 2
 

@@ -2,6 +2,9 @@
 ==============
 Opsætte hosts-fil, opsætning af Ubuntu pakkestruktur samt installation af alle nødvendige pakker for at kunne domainjoine.
 
+.. role:: bash(code)
+   :language: bash
+
 Filen finder du under :bash:'/etc/hosts'
 
 Her sætter vi Hostname i hosts-filen
