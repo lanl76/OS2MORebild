@@ -3,13 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Velkommen til OS2Mo Rebild's opsætning og dokumentation!
+Velkommen til OS2MO Rebild's opsætning og dokumentation!
 ========================================================
     .. figure:: RUbuntu.png
         :width: 200
         :alt: Alternative text
         :figclass: align-right
-
+        .. role:: bash(code)
+        :language: bash
 .. toctree::
    :maxdepth: 2
 
