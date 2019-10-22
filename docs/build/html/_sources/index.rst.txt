@@ -5,7 +5,7 @@
 
 Velkommen til OS2MO Rebild's opsætning og dokumentation!
 ========================================================
-    .. figure:: RUbuntu.png
+    .. figure:: graphic/RUbuntu.png
         :width: 200
         :alt: Alternative text
         :figclass: align-right
@@ -13,6 +13,7 @@ Velkommen til OS2MO Rebild's opsætning og dokumentation!
 .. toctree::
    :maxdepth: 2
 
+   0_Preinstall.rst
    1_Hosts_File.rst
    2_Apt_Update.rst
    3_IPv6.rst
@@ -29,7 +30,7 @@ Velkommen til OS2MO Rebild's opsætning og dokumentation!
 OS2MO Server
 ============
 
-  .. figure:: OS2MO_Produktbanner.png
+  .. figure:: graphic/OS2MO_Produktbanner.png
       :width: 200
       :alt: OS2MO OS2MO_Produktbanner
       :figclass: align-right
