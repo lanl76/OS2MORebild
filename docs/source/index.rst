@@ -28,6 +28,7 @@ Velkommen til OS2MO Rebild's opsætning og dokumentation!
 
 OS2MO Server
 ============
+
   .. figure:: OS2MO_Produktbanner.png
       :width: 200
       :alt: OS2MO OS2MO_Produktbanner
@@ -39,9 +40,12 @@ Brugernavn og kode til at logge på serveren.
 
 Rettigheder styres derved via AD, som tilfældet er med Windows servere.
 
-**Ubuntuserveren trin for trin:**
+**Ubuntuserveren trin for trin**
 
-Installer Ubuntu serveren via ISO (det anbefales at man som minimum har brugerkendskab til Linux og SSH for at udføre denne guide)
+1. Installer Ubuntuserveren via ISO (det anbefales at man som minimum har brugerkendskab til Linux og SSH for at udføre denne guide)
+
+###UNDER UDARBEJDELSE
+
 Under installationen skal der opsættes Fast IP på serveren.
 
 Denne vejledning/dokumentation er blevet til efter hjælp af Nils Rimestad, Viborg og dennes meget grundige viden på området. Ligeledes er vejledningen
