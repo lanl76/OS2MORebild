@@ -31,7 +31,7 @@ OS2MO Server
   .. figure:: OS2MO_Produktbanner.png
       :width: 200
       :alt: OS2MO OS2MO_Produktbanner
-      :figclass: align-left
+      :figclass: align-right
 
 OS2MO Serveren ved Rebild Kommune er en Ubuntu 16.04.
 Ubuntu Serveren har vi opsat så den er domainjoined, hvilket giver fordelen, at vores IT-folk og eksterne Magentakonsulenter kan bruge AD
