@@ -9,32 +9,42 @@ Boot maskinen op på ISO'en og følg installationen herunder.
     :alt: Alternative text
     :figclass: align-right
 
+1. Vælg installationssprog - "Dansk"
 
 .. figure:: graphic/2_Installer.png
     :width: 200
     :alt: Alternative text
     :figclass: align-right
 
+2. Vælg at insallere - "Installér Ubuntu Server"
 
 .. figure:: graphic/3_Oversættelse.png
     :width: 200
     :alt: Alternative text
     :figclass: align-right
 
+3. Bekræft at den manglende oversættelse af installationssproget ikke er komplet - "Ja"
+
 .. figure:: graphic/4_Lokation.png
     :width: 200
     :alt: Alternative text
     :figclass: align-right
+
+4. Vælg opholdssted - "Danmark"
 
 .. figure:: graphic/5_Tastatur.png
     :width: 200
     :alt: Alternative text
     :figclass: align-right
 
+5. Genkend tastaturet - "Nej"
+
 .. figure:: graphic/6_TastaturlayoutLand.png
     :width: 200
     :alt: Alternative text
     :figclass: align-right
+
+6. Indstil tastaturet - "Danish"
 
 .. figure:: graphic/7_TastaturlayoutLand2.png
     :width: 200
