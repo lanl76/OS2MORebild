@@ -13,6 +13,7 @@ Boot maskinen op på ISO'en og følg installationen herunder.
 
 .. image:: graphic/2_Installer.png
     :width: 200
+    :height: 100
     :alt: Alternative text
     :align: right
 
