@@ -11,10 +11,10 @@ Boot maskinen op på ISO'en og følg installationen herunder.
 
 1. Vælg installationssprog - "Dansk"
 
-.. figure:: graphic/2_Installer.png
+.. image:: graphic/2_Installer.png
     :width: 200
     :alt: Alternative text
-    :figclass: align-right
+    :align: right
 
 2. Vælg at insallere - "Installér Ubuntu Server"
 
