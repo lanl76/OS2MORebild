@@ -13,16 +13,17 @@ Boot maskinen op på ISO'en og følg installationen herunder.
 
 .. image:: graphic/2_Installer.png
     :width: 200
-    :height: 100
+    :height: 200
     :alt: Alternative text
     :align: right
 
 2. Vælg at insallere - "Installér Ubuntu Server"
 
-.. figure:: graphic/3_Oversættelse.png
+.. image:: graphic/3_Oversættelse.png
     :width: 200
+    :height: 200
     :alt: Alternative text
-    :figclass: align-right
+    :align: right
 
 3. Bekræft at den manglende oversættelse af installationssproget ikke er komplet - "Ja"
 
